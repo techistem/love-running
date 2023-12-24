@@ -12,7 +12,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
@@ -26,9 +25,6 @@ h3 {
     letter-spacing: 2px;
     color: #252525;
 }
-.hidden-heading {
-    display: none;
-  }
 
 /* Header */
 header {
@@ -55,13 +51,12 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
-
 }
 
 /* Navbar styles with dropdown toggle*/
@@ -100,7 +95,7 @@ main {
 #hero {
     height: 600px;
     width: 100%;
-    background: url("../images/running.webp") no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 
 }
@@ -117,38 +112,76 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2,
-#cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
+
 /* Reason section */
 #reasons {
     width: 90%;
     margin: 20px auto;
-  }
-  
-  #reasons h2 {
+}
+
+#reasons h2 {
     margin-bottom: 20px;
     text-align: center;
     font-size: 280%;
-  }
-
-#benefits-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
 #circle-cover-bg {
     background: url("../images/reasons-image.webp") no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
+    /* Makes the square image into a circle */
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
 }
+#benefits-image {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Meetup Times Section */
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
+}
 
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide. 
+    Each div will expand to fill the avaible space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Creates a grid of meetup time divs over the background images */
+    border: 2px solid white;
+}
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
+}
 /* Footer */
 #social-networks {
     text-align: center;
@@ -181,7 +214,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -197,7 +230,7 @@ main {
 
     /* Main content */
     main {
-        /* Push main content down to accomodate larger header */
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
@@ -216,17 +249,17 @@ main {
         width: 100%;
     }
 
-    #benefits-physical > div,
-    #benefits-mental > div {
+    #benefits-physical>div,
+    #benefits-mental>div {
         width: 75%;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
-      
+
     }
-   
+
 }
 
 /* Large devices (laptops and desktops, 992px and up */
@@ -235,26 +268,32 @@ main {
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
 @media screen and (min-width: 1200px) {
+
     /* Reasons section */
     #benefits {
-      display: flex;
-      flex-direction: row;
+        display: flex;
+        flex-direction: row;
     }
+
     #benefits > div {
-      flex: 1;
+        flex: 1;
     }
+
     #benefits-image {
-      order: 0;
+        order: 0;
     }
+
     #benefits-mental {
-      order: 1;
+        order: 1;
     }
+
     #benefits-mental > div {
-      align-self: flex-start;
+        align-self: flex-start;
     }
-  
+
     #benefits-physical > div {
-      align-self: flex-end;
+        align-self: flex-end;
     }
-  }
+}

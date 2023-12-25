@@ -25,6 +25,7 @@ h3 {
     letter-spacing: 2px;
     color: #252525;
 }
+
 .hidden-heading {
     display: none;
 }
@@ -146,6 +147,7 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
 #circle-cover-bg {
     background: url("../images/reasons-image.webp") no-repeat top center / cover;
     height: 90vw;
@@ -156,11 +158,13 @@ main {
     max-width: 300px;
     max-height: 300px;
 }
+
 #benefits-image {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /* Meetup Times Section */
 #times {
     background: url('../images/dublin-city.webp') no-repeat center/cover;
@@ -181,17 +185,70 @@ main {
     /* Creates a grid of meetup time divs over the background images */
     border: 2px solid white;
 }
+
 #times h3 {
     /* Override the heading colour set in general styles */
     color: #fafafa;
 }
+
 /* Gallery page */
-#photos img{
-    width: 100%; 
+#photos img {
+    width: 100%;
     line-height: 1em;
 }
+
 #photos {
     line-height: 0;
+}
+
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
 }
 
 /* Footer */
@@ -209,11 +266,12 @@ main {
     color: #3a3a3a;
 
 }
+
 /* Media query: large and landspace (576px and up) */
 @media screen and (min-width: 576px) {
     #photos {
-        column-count: 2; 
-        column-gap: 0; 
+        column-count: 2;
+        column-gap: 0;
     }
 }
 
@@ -278,6 +336,7 @@ main {
         align-self: flex-end;
 
     }
+
     /* Gallery */
     #photos {
         column-count: 3;
@@ -290,6 +349,7 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
     /* Gallery */
     #photos {
         column-count: 4;
@@ -304,7 +364,7 @@ main {
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -316,11 +376,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
